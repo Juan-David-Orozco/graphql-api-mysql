@@ -10,7 +10,7 @@ export class Users extends BaseEntity {
   name: string;
 
   @Column()
-  usename: string;
+  username: string;
 
   @Column()
   password: string;
