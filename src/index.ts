@@ -1,10 +1,15 @@
 import app from './app'
 import { connectDB } from './db'
+import { PORT } from './config'
 
 async function main() {
-  await connectDB()
-  app.listen(3000)
-  console.log("Server on port 3000")
+  try {
+    await connectDB()
+    app.listen(PORT)
+    console.log("Server on port", PORT)
+  } catch (e) {
+    console.log(e)
+  }
 }
 
 main()
